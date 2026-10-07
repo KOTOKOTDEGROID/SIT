@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Список 3D-принтеров</title>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="index.html">Самые популярные 3D-принтеры</a></li>
+				<li><a href="detail.html">Bambu Lab X1 Carbon</a></li>
+				<li><b>Список 3D-принтеров</b></li>
+			</ul>
+		</nav>
+		<hr>
+		<details open>
+			<summary>График</summary>
+			<form action="#">
+				<fieldset>
+					<legend>Значение по оси OX</legend>
+					<p><input type="radio" id="oxType" name="ox" value="type"><label for="oxType">Тип</label></p>
+					<p><input type="radio" id="oxMaker" name="ox" value="maker"><label for="oxMaker">Производитель</label></p>
+					<p><input type="radio" id="oxYear" name="ox" value="year"><label for="oxYear">Год выпуска</label></p>
+				</fieldset>
+				<fieldset>
+					<legend>Значение по оси OY</legend>
+					<p><input type="checkbox" id="oyMax" name="oy" value="max"><label for="oyMax">Максимальная цена</label></p>
+					<p><input type="checkbox" id="oyMin" name="oy" value="min"><label for="oyMin">Минимальная цена</label></p>
+					<p><input type="checkbox" id="oyAvg" name="oy" value="count"><label for="oyAvg">Средняя цена</label></p>
+				</fieldset>
+				<p><button type="button">Построить</button></p>
+			</form>
+			<p>Здесь будет график</p>
+			<p><img src="images/kotik.jpg" alt="Котик"></p>
+		</details>
+		<details open>
+			<summary>Фильтр</summary>
+			<form action="#">
+				<p><label for="filterName">Название:</label> <input type="text" id="filterName" name="filterName"></p>
+				<p><label for="filterType">Тип:</label> <input type="text" id="filterType" name="filterType"></p>
+				<p><label for="filterMaker">Производитель:</label> <input type="text" id="filterMaker" name="filterMaker"></p>
+				<p><label for="filterRateFrom">Оценка: от</label> <input type="number" id="filterRateFrom" name="filterRateFrom" step="0.1"> <label for="filterRateTo">до</label> <input type="number" id="filterRateTo" name="filterRateTo" step="0.1"></p>
+				<p><label for="filterPriceFrom">Цена: от</label> <input type="number" id="filterPriceFrom" name="filterPriceFrom"> <label for="filterPriceTo">до</label> <input type="number" id="filterPriceTo" name="filterPriceTo"></p>
+				<p><label for="filterYearFrom">Год выпуска: от</label> <input type="number" id="filterYearFrom" name="filterYearFrom"> <label for="filterYearTo">до</label> <input type="number" id="filterYearTo" name="filterYearTo"></p>
+				<p><button type="button">Найти</button></p>
+			</form>
+		</details>
+		<details open>
+			<summary>Сортировка</summary>
+			<form action="#">
+			<p>
+				<label for="sortField1">Первый уровень:</label> 
+				<select id="sortField1" name="sortField1">
+					<option value="none">Нет</option>
+					<option value="name">Название</option>
+					<option value="type">Тип</option>
+					<option value="maker">Производитель</option>
+					<option value="rating">Оценка</option>
+					<option value="price">Цена</option>
+					<option value="year">Год выпуска</option>
+				</select> 
+				<input type="checkbox" id="sortDesc1" name="sortDesc1">
+				<label for="sortDesc1">по убыванию?</label>
+			</p>
+			<p>
+				<label for="sortField2">Второй уровень:</label> 
+				<select id="sortField2" name="sortField2">
+					<option value="none">Нет</option>
+					<option value="name">Название</option>
+					<option value="type">Тип</option>
+					<option value="maker">Производитель</option>
+					<option value="rating">Оценка</option>
+					<option value="price">Цена</option>
+					<option value="year">Год выпуска</option>
+				</select> <input type="checkbox" id="sortDesc2" name="sortDesc2">
+				<label for="sortDesc2">по убыванию?</label>
+			</p>
+			<p>
+				<label for="sortField3">Третий уровень:</label> 
+				<select id="sortField3" name="sortField3">
+					<option value="none">Нет</option>
+					<option value="name">Название</option>
+					<option value="type">Тип</option>
+					<option value="maker">Производитель</option>
+					<option value="rating">Оценка</option>
+					<option value="price">Цена</option>
+					<option value="year">Год выпуска</option>
+				</select> 
+				<input type="checkbox" id="sortDesc3" name="sortDesc3">
+				<label for="sortDesc3">по убыванию?</label>
+			</p>
+			<p><button type="button">Сортировать</button></p>
+			</form>
+		</details>
+		<hr>
+		<table border="1" cellspacing="0" cellpadding="5">
+			<caption>Список 3D-принтеров</caption>
+			<thead>
+				<tr><th>Название модели</th><th>Тип</th><th>Производитель</th><th>Оценка</th><th>Цена, $</th><th>Год выпуска</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>Creality Ender-3</td><td>FDM</td><td>Creality</td><td>4.5</td><td>199</td><td>2018</td></tr>
+				<tr><td>Creality Ender-3 V2</td><td>FDM</td><td>Creality</td><td>4.6</td><td>259</td><td>2020</td></tr>
+				<tr><td>Creality Ender-3 S1</td><td>FDM</td><td>Creality</td><td>4.6</td><td>399</td><td>2021</td></tr>
+				<tr><td>Creality Ender-3 V3 SE</td><td>FDM</td><td>Creality</td><td>4.5</td><td>199</td><td>2023</td></tr>
+				<tr><td>Creality Ender-3 V3 KE</td><td>FDM</td><td>Creality</td><td>4.6</td><td>269</td><td>2023</td></tr>
+				<tr><td>Creality K1</td><td>FDM</td><td>Creality</td><td>4.6</td><td>399</td><td>2023</td></tr>
+				<tr><td>Creality K1 Max</td><td>FDM</td><td>Creality</td><td>4.5</td><td>599</td><td>2023</td></tr>
+				<tr><td>Creality K1C</td><td>FDM</td><td>Creality</td><td>4.6</td><td>499</td><td>2024</td></tr>
+				<tr><td>Creality CR-10 Smart Pro</td><td>FDM</td><td>Creality</td><td>4.3</td><td>499</td><td>2022</td></tr>
+				<tr><td>Creality Halot-One</td><td>Resin (LCD)</td><td>Creality</td><td>4.3</td><td>229</td><td>2021</td></tr>
+				<tr><td>Creality Halot-Mage</td><td>Resin (LCD)</td><td>Creality</td><td>4.4</td><td>399</td><td>2023</td></tr>
+				<tr><td>Creality Halot-Sky</td><td>Resin (LCD)</td><td>Creality</td><td>4.3</td><td>379</td><td>2022</td></tr>
+				<tr><td>Prusa i3 MK3S+</td><td>FDM</td><td>Prusa Research</td><td>4.9</td><td>799</td><td>2020</td></tr>
+				<tr><td>Prusa MK4</td><td>FDM</td><td>Prusa Research</td><td>4.8</td><td>799</td><td>2022</td></tr>
+				<tr><td>Prusa MK4S</td><td>FDM</td><td>Prusa Research</td><td>4.8</td><td>799</td><td>2024</td></tr>
+				<tr><td>Prusa MINI+</td><td>FDM</td><td>Prusa Research</td><td>4.7</td><td>429</td><td>2020</td></tr>
+				<tr><td>Prusa XL</td><td>FDM</td><td>Prusa Research</td><td>4.7</td><td>1999</td><td>2023</td></tr>
+				<tr><td>Prusa Core One</td><td>FDM</td><td>Prusa Research</td><td>4.8</td><td>949</td><td>2024</td></tr>
+				<tr><td>Prusa SL1S Speed</td><td>Resin (LCD)</td><td>Prusa Research</td><td>4.6</td><td>1999</td><td>2021</td></tr>
+				<tr><td>Bambu Lab X1 Carbon</td><td>FDM</td><td>Bambu Lab</td><td>4.8</td><td>1199</td><td>2022</td></tr>
+				<tr><td>Bambu Lab P1P</td><td>FDM</td><td>Bambu Lab</td><td>4.7</td><td>599</td><td>2023</td></tr>
+				<tr><td>Bambu Lab P1S</td><td>FDM</td><td>Bambu Lab</td><td>4.8</td><td>699</td><td>2023</td></tr>
+				<tr><td>Bambu Lab A1 mini</td><td>FDM</td><td>Bambu Lab</td><td>4.7</td><td>299</td><td>2023</td></tr>
+				<tr><td>Bambu Lab A1</td><td>FDM</td><td>Bambu Lab</td><td>4.8</td><td>399</td><td>2023</td></tr>
+				<tr><td>Bambu Lab H2D</td><td>FDM</td><td>Bambu Lab</td><td>4.7</td><td>1999</td><td>2025</td></tr>
+				<tr><td>Anycubic Kobra 2</td><td>FDM</td><td>Anycubic</td><td>4.4</td><td>199</td><td>2023</td></tr>
+				<tr><td>Anycubic Kobra 2 Pro</td><td>FDM</td><td>Anycubic</td><td>4.4</td><td>299</td><td>2023</td></tr>
+				<tr><td>Anycubic Vyper</td><td>FDM</td><td>Anycubic</td><td>4.3</td><td>299</td><td>2021</td></tr>
+				<tr><td>Anycubic Photon Mono 2</td><td>Resin (LCD)</td><td>Anycubic</td><td>4.4</td><td>229</td><td>2022</td></tr>
+				<tr><td>Anycubic Photon Mono M5s</td><td>Resin (LCD)</td><td>Anycubic</td><td>4.5</td><td>399</td><td>2023</td></tr>
+				<tr><td>Elegoo Neptune 3 Pro</td><td>FDM</td><td>Elegoo</td><td>4.4</td><td>229</td><td>2022</td></tr>
+				<tr><td>Elegoo Neptune 4</td><td>FDM</td><td>Elegoo</td><td>4.5</td><td>259</td><td>2023</td></tr>
+				<tr><td>Elegoo Neptune 4 Pro</td><td>FDM</td><td>Elegoo</td><td>4.5</td><td>299</td><td>2023</td></tr>
+				<tr><td>Elegoo Centauri Carbon</td><td>FDM</td><td>Elegoo</td><td>4.6</td><td>299</td><td>2025</td></tr>
+				<tr><td>Elegoo Mars 3</td><td>Resin (LCD)</td><td>Elegoo</td><td>4.4</td><td>199</td><td>2021</td></tr>
+				<tr><td>Elegoo Mars 4 Ultra</td><td>Resin (LCD)</td><td>Elegoo</td><td>4.5</td><td>239</td><td>2023</td></tr>
+				<tr><td>Elegoo Saturn 2</td><td>Resin (LCD)</td><td>Elegoo</td><td>4.5</td><td>399</td><td>2022</td></tr>
+				<tr><td>Elegoo Saturn 3 Ultra</td><td>Resin (LCD)</td><td>Elegoo</td><td>4.5</td><td>499</td><td>2023</td></tr>
+				<tr><td>Artillery Sidewinder X2</td><td>FDM</td><td>Artillery</td><td>4.2</td><td>429</td><td>2021</td></tr>
+				<tr><td>Artillery Genius Pro</td><td>FDM</td><td>Artillery</td><td>4.3</td><td>299</td><td>2021</td></tr>
+				<tr><td>Flashforge Adventurer 3</td><td>FDM</td><td>Flashforge</td><td>4.3</td><td>399</td><td>2019</td></tr>
+				<tr><td>Flashforge Adventurer 5M</td><td>FDM</td><td>Flashforge</td><td>4.6</td><td>299</td><td>2023</td></tr>
+				<tr><td>Flashforge Creator Pro 2</td><td>FDM</td><td>Flashforge</td><td>4.4</td><td>699</td><td>2020</td></tr>
+				<tr><td>Formlabs Form 3</td><td>Resin (SLA)</td><td>Formlabs</td><td>4.7</td><td>3499</td><td>2019</td></tr>
+				<tr><td>Formlabs Form 3+</td><td>Resin (SLA)</td><td>Formlabs</td><td>4.7</td><td>3499</td><td>2021</td></tr>
+				<tr><td>Formlabs Form 4</td><td>Resin (LCD)</td><td>Formlabs</td><td>4.8</td><td>3999</td><td>2024</td></tr>
+				<tr><td>Formlabs Fuse 1+ 30W</td><td>SLS</td><td>Formlabs</td><td>4.6</td><td>29999</td><td>2021</td></tr>
+				<tr><td>Ultimaker S3</td><td>FDM</td><td>Ultimaker</td><td>4.5</td><td>3950</td><td>2018</td></tr>
+				<tr><td>Sovol SV06</td><td>FDM</td><td>Sovol</td><td>4.5</td><td>269</td><td>2022</td></tr>
+				<tr><td>Phrozen Sonic Mini 8K</td><td>Resin (LCD)</td><td>Phrozen</td><td>4.5</td><td>399</td><td>2021</td></tr>
+				<tr><td>Qidi Plus4</td><td>FDM</td><td>Qidi</td><td>4.6</td><td>699</td><td>2024</td></tr>
+			</tbody>
+		</table>
+		<hr>
+		<footer>
+		<p>Группа: <b>Б9124-09.03.04 (6)</b>. Разработчик: <b>Хворостянко А. Д.</b></p>
+		</footer>
+	</body>
+</html>
