@@ -1,1 +1,2 @@
 # MEOW
+![Котик](kotik.jpg)
